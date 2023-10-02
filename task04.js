@@ -1,15 +1,28 @@
 export function fizzBuzz(num) {
 
+    if (typeof num !== 'number' || isNaN(num) || num <= 0){
+
+        console.log("Invalid input");
+        return;
+    }
+    let result = '';
     for (let i = 1; i <= num; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
-            console.log('FizzBuzz');
+            result += 'FizzBuzz';
         } else if (i % 3 === 0) {
-            console.log('Fizz');
+            result += 'Fizz';
         } else if (i % 5 === 0) {
-            console.log('Buzz');
+            result+= 'Buzz';
         } else {
-            console.log(i);
+            result+= i;
+        }
+
+        if (i < num) {
+
+            result += ', '
         }
     }
+
+    console.log(result);
 
 }
