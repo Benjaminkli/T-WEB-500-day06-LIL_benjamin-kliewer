@@ -1,10 +1,5 @@
 export function fizzBuzz(num) {
 
-    if (typeof num !== 'number' || isNaN(num) || num <= 0){
-
-        console.log("Invalid input");
-        return;
-    }
     let result = '';
     for (let i = 1; i <= num; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
